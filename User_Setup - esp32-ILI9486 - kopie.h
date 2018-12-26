@@ -88,16 +88,6 @@
 
 // ###### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP8266 SETUP ######
 
-#define TFT_MISO PIN_D6  
-#define TFT_MOSI PIN_D7  
-#define TFT_SCLK PIN_D5  
-#define TFT_CS    PIN_D8  // Chip select control pin
-#define TFT_DC    PIN_D3  // Data Command control pin
-#define TFT_RST   PIN_D4  // Reset pin (could connect to RST //pin)
-#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is //connected to ESP32 board RST
-#define TOUCH_CS  PIN_D2     // Chip select pin (T_CS) of touch //screen
-
-
 // For NodeMCU - use pin numbers in the form PIN_Dx where Dx //is the NodeMCU pin designation
 //#define TFT_CS   PIN_D8  // Chip select control pin D8
 //#define TFT_DC   PIN_D3  // Data Command control pin
@@ -129,14 +119,15 @@
 // For ESP32 Dev board (only tested with ILI9341 display)
 // The hardware SPI can be mapped to any pins
 
-//#define TFT_MISO 19
-//#define TFT_MOSI 23
-//#define TFT_SCLK 18
-//#define TFT_CS    2  // Chip select control pin
-//#define TFT_DC    4  // Data Command control pin
-//#define TFT_RST   0  // Reset pin (could connect to RST pin)
-//#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET //is //connected to ESP32 board RST
-//#define TOUCH_CS  15     // Chip select pin (T_CS) of touch //screen
+#define TFT_MISO 19
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS    2  // Chip select control pin
+#define TFT_DC    4  // Data Command control pin
+#define TFT_RST   6  // Reset pin (could connect to RST pin)
+//Changed for Caja's Alarmclock
+#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is //connected to ESP32 board RST
+#define TOUCH_CS  15     // Chip select pin (T_CS) of touch //screen
 
 // For the M5Stack module use these #define lines
 //#define TFT_MISO 19
@@ -217,7 +208,7 @@
 
 // Comment out the #define below to stop the SPIFFS filing system and smooth font code being loaded
 // this will save ~20kbytes of FLASH
-#define SMOOTH_FONT
+//#define SMOOTH_FONT
 
 // ##################################################################################
 //
